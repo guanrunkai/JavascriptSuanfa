@@ -5,28 +5,26 @@
  // temp = 5 
  // 
 
- const selectionSort = (arr)=>{
+const selectionSort = (arr)=>{
 
+  
+  for(let i = 0;i<arr.length-1;i++){
 
-
-   for(let i = 0;i<arr.length-1;i++){
-
-    let min = i 
-
-    for(let j = i+1;j<arr.length;j++){
-
+    let min = i
+ 
+    for(let j = min+1;j<arr.length;j++){
       if(arr[min]>arr[j]){
-        min = j
+        min = j 
       }
     }
 
-    let tem = arr[min]
+    let now = arr[min]
     arr[min] = arr[i]
-    arr[i] = tem
+    arr[i] = now
+    
+  }
+  return arr
+  
+}
 
-   }
-
-   return arr
- }
-
- console.log(selectionSort([1,3,5,0,2,4]));
+console.log(selectionSort([1,3,5,0,2,4]))
