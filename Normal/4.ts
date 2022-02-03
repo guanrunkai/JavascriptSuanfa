@@ -18,7 +18,7 @@ const shellSort =(arr)=>{
        let j = i
        let tem = arr[i]
       
-       while(j>0 && arr[j-gap]>tem){
+       while(j>=gap && arr[j-gap]>tem){
          arr[j] = arr[j-gap]
          
          j-=gap
