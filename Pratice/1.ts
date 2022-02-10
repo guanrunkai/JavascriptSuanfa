@@ -172,6 +172,7 @@ const quickSort123 = (left,right,arr)=>{
 
   while(i<j){
 
+    console.log(++i);
     while(arr[++i]<point){}
     while(arr[--j]>point){}
 
@@ -181,7 +182,7 @@ const quickSort123 = (left,right,arr)=>{
 
   }
   
-   console.log(arr);
+   
   swapA(i,right-1,arr)
 
   quickSort123(left,i-1,arr)
